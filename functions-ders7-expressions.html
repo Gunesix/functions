@@ -23,54 +23,91 @@
     <p>let = func ( param1, param2, param3) => expression</p>
 
     <script>
-      /*Function'un es6 ile birlikte gelen yeniliği aşağıdaki gibi örneklendirilir.*/
-      let func = function (param1, param2, param3) {
-        return expression;
-      };
+        /*Function'un es6 ile birlikte gelen yeniliği aşağıdaki gibi örneklendirilir.*/
+        let func = function (param1, param2, param3) {
+          return expression;
+        };
 
-      /*   function hesap(param1,param2,param3){
-        return param1+param2+param3;
-    }
-    hesap(5,6,7)
-    eski sistem ile bu şekilde yapmamız gerekirken yeni sistem ile aşağıdaki gibi bir hesaplama işlemi yapacağız. İşlem eskiye göre oldukça kolay görünüyor.
-    */
-
-      const toplama = (n1, n2) => n1 + n2; // toplama isimli function oluşturduk ve n1 ile n2 işlemini yapmasını gerektiğini iletip console yazdırma komutunu verdik.
-
-      console.log(toplama(5, 5));
-
-      const greeting = (name) => console.log("Hoş geldiniz " + name);
-
-      // greeting isimli function oluşturup alert ile hoş geldiniz diyip  greeting içerisine verdiğiz parametre ile beraber Hoşgeldiniz ibrahim yazılı alert çıkarıldı.
-
-      greeting("ibrahim");
-
-      // Daha fazla örnek:
-      // Yeni sisteem göre yazma
-      const kahve = (param1, param2) => param1 + " " + param2;
-      console.log(kahve("Türk", "kahvesi"));
-
-      // Eski sisteme göre yazma
-      function kahv(param1, param2) {
-        return param1 + " " + param2;
+        /*   function hesap(param1,param2,param3){
+          return param1+param2+param3;
       }
-      kahv("Türk", "Kahvesi");
-      console.log(kahv("Türk", "Kahvesi"));
-      // okunabilirlik ve hız açıksından yeni sistem daha faydalı.
+      hesap(5,6,7)
+      eski sistem ile bu şekilde yapmamız gerekirken yeni sistem ile aşağıdaki gibi bir hesaplama işlemi yapacağız. İşlem eskiye göre oldukça kolay görünüyor.
+      */
 
-      // Daha fazla Örnek;
+        const toplama = (n1, n2) => n1 + n2; // toplama isimli function oluşturduk ve n1 ile n2 işlemini yapmasını gerektiğini iletip console yazdırma komutunu verdik.
 
-      // ES6 ile yeni tip syntax üzerindeki örneklerimiz.
+        console.log(toplama(5, 5));
 
-      let deneyim = prompt("Bu konuda Kaç yıl Tecrübeniz var?", "örneğin 2");
-      let yas = prompt('Yaşınızı Yazınız')
+        const greeting = (name) => console.log("Hoş geldiniz " + name);
 
-      const yazilim =
-        deneyim > 5 || yas > 30
-          ? () => alert("Bu konuda yeterince tecrübem var")
-          : () => alert("Hiçbirşey Bilmiyorum");
+        // greeting isimli function oluşturup alert ile hoş geldiniz diyip  greeting içerisine verdiğiz parametre ile beraber Hoşgeldiniz ibrahim yazılı alert çıkarıldı.
 
-      yazilim();
+        greeting("ibrahim");
+
+        // Daha fazla örnek:
+        // Yeni sisteem göre yazma
+        const kahve = (param1, param2) => param1 + " " + param2;
+        console.log(kahve("Türk", "kahvesi"));
+
+        // Eski sisteme göre yazma
+        function kahv(param1, param2) {
+          return param1 + " " + param2;
+        }
+        kahv("Türk", "Kahvesi");
+        console.log(kahv("Türk", "Kahvesi"));
+        // okunabilirlik ve hız açıksından yeni sistem daha faydalı.
+
+        // Daha fazla Örnek;
+
+        // ES6 ile yeni tip syntax üzerindeki örneklerimiz.
+
+        let deneyim = prompt("Bu konuda Kaç yıl Tecrübeniz var?", "örneğin 2");
+        let yas = prompt('Yaşınızı Yazınız')
+
+        const yazilim =
+          deneyim > 5 || yas > 30
+            ? () => alert("Bu konuda yeterince tecrübem var")
+            : () => alert("Hiçbirşey Bilmiyorum");
+
+        yazilim();
+
+
+
+        const helloworld = ()=> console.log('Hello World')
+        helloworld()
+
+        const carp = (a1,a2) => a1*a2;
+        console.log(carp(5,6))
+
+        let userName=prompt('Kullanıcı Adınız')
+        let age=prompt('Yaşınız')
+
+        const karsilama = (userName,age) =>  document.write(`Merhaba ${userName} hoş geldin. sitemizin yaş ortalaması 19 olup senin yaşın ${age} üzeri.`)
+
+        karsilama(userName,age)
+
+
+
+        let toplam = (a,b) =>  a+b;
+
+    
+        console.log(toplam(5,9))
+
+
+        let yasHesap = yas=>{
+            if (age > 15)
+            {console.log('Yaşın 5 den büyük')}
+            else{
+                console.log('biraz Daha büyümen lazım')
+            }
+        }
+
+            yasHesap()
+
+
+
+        
 
 
 
