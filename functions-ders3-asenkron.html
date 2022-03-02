@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function ders 3 Callback ve Asenkron Çalışma</title>
+</head>
+<body>
+    <div id="info"></div>
+</body>
+<script>
+/* 
+Callback ve asenkron çalışma; 
+senkron çalışma işlemlerin ardı ardına bir birini bekleyerek yapılan çalışmalardır fakat Javascript içerisinde asenkron çalışmaları inceleyeceğiz. Asenkron çalışma sırası geleni beklemek yerine sırasız bir şekilde yapılan çalışmalardır. Örneğin Aşağıyı inceleyiniz.
+*/
+
+
+/*Senkron Çalışma Örneği.*/
+function printScreen1(){
+    console.log('Birinci Ekran Alıntısı')
+}
+
+function printScreen2(){
+    console.log('İkinci Ekran  Alıntısı')
+}
+function printScreen3(){
+    console.log('Üçüncü Ekran Alıntısı')
+}
+
+printScreen1()
+printScreen2()
+printScreen3()
+
+
+console.log('**********************************************')
+
+
+
+/*A Senkron Çalışma Örneği*/
+
+function printScreen4(){
+    console.log('Dördüncü Ekran Alıntısı')
+}
+function printScreen5(){
+    setTimeout(function(){
+        /*Burada gecikmesini istediğimiz kısım için setTimeout işlevini kullanıp 3000 Milisaniye gecikmesini sağladık.*/
+        console.log('Beşinci Ekran alıntısı')
+    },3000);
+}
+function printScreen6(){
+    console.log('Altıncı Ekran Alıntısı')
+}
+
+
+printScreen4()
+printScreen5()
+printScreen6()
+
+
+// Asenkron işlevlerde printscreen4 ve printscreen6 yazılıp ardından printscreen5 gelmiştir sebebi asenkron olması yani senkronize olmamasıdır. bundan kurtulmak için callback fonksyonunu kullanırız.
+
+
+
+</script>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+/*
+Callback işlemlerde Asenkron çalışmanın aksine senkron çalışma işlevi yapabiliriz.
+*/
+
+
+    function printScreen1(){ // ilk çıkmasını istediğimiz ekran çıktısı
+        console.log('birinci Ekran Çıktısı')
+
+    }
+
+    function printScreen2(callback1,callback2){
+        setTimeout(function(){
+            callback1();
+            console.log('ikinci Ekran Çıktısı');
+            callback2();
+        },3000)
+    }
+    function printScreen3(){
+        console.log('Üçüncü ekran Çıktısı')
+
+    }
+
+printScreen2(printScreen1,printScreen3)
+
+/*
+işlevin özeti : 
+Ekran çıktıların hepsinin aynı anda sıralı şekilde çıkması için settimeout ve callback fonsyonu kullanıldı. Callback'ler kısa ve hızlı yazılabilmesi için parametre olarak kullanıldı.
+*/
+
+// Harici örnekler
+
+function toplama(){
+    console.log(2+1)
+}
+
+function çıkarma(){
+    setTimeout(function(){
+        console.log(3-2)
+    },3000)
+}
+
+function çıkarma1(){
+    setTimeout(function(){
+        console.log(5-4)
+    },2000)
+}
+
+function bölme(){
+    console.log(3*3)
+}
+
+
+function hesaplama(n1,n2,n3,n4){
+    setTimeout(function(){
+        n1();
+        n2();
+        console.log(6+6+6+6)
+        n3();
+        n4();
+    })
+}
+
+hesaplama(toplama,çıkarma,bölme,çıkarma1)
+
+
+</script>
+</html>

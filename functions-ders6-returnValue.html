@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>returnValue</title>
+</head>
+<body>
+    <h3>Return Value</h3>
+    <p> bir fonksyonda <strong>return</strong> anahtar kelimesi kullanarak sıfır yada bir döndürülebilir.</p>
+
+    <script>
+        function topla(n1,n2){
+            return n1 + n2; // yapılmasını istediğimiz işlemi belirttik ve return Kullanarak geri döndürmesini sağladık.
+        }
+        let sonuc = topla(10,20);
+        console.log(sonuc) // sonucumuz 30 çıkacaktır.
+
+        function carp(n1,n2){
+            n1*n2; // return kullanmadığımız için işlem gerçekleşmeyecek
+        }
+        let result = carp(10,20)
+        console.log(result) // sonuç undefined olacak.
+
+
+        function carp1(n1,n2){
+            return n1*n2; // return kullanarak çarpma işlemi yapmasını istedik ve işlem gerçekleşti.
+        }
+        let resultCarp = carp1(10,20)
+        console.log(resultCarp) // sonucumuz 200 olarak konsola yazdırıldı.
+
+//<!-- Daha fazla örnekler-->
+
+        function hesaplama(a1,a2,a3,a4){
+          //  return a1*a4; // Sonucumuz 40 Çıkar
+           // return a2+a3; // sonuç 13 çıkar
+          //  return a1/a3; // 0,7 çıkar
+            return a2-a4; // -2 Çıkar
+
+        }
+        let hesapSonuc=hesaplama(5,6,7,8)
+        console.log(hesapSonuc)
+
+        /* Sonuç olarak Return işlemin yapılıp yapılmaması gerektiğini söyler.*/
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Declaration</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function mesajVer(greeting){
+        alert('Herkese Merhaba!' + greeting)
+    }
+    // Yukarıdaki fonksyonu mesajVer() ile çağırıyoruz ve ekran açılınca Alert ile  Herkse Merhaba alarmı çıkar
+
+    mesajVer(' hoş geldiniz')
+
+
+    function mesajVer(ad, soyad) {
+  alert(`Merhaba ${ad} ${soyad}`);
+}
+
+mesajVer("ibrahim","Güneş")/* Buj kısımda Merhaba ibrahim Güneş şeklinde yazacaktır.  ad parametresi için ibrahim soyad parametresi için ise Güneş  yazıldı Bu sebeple Merhaba İbrahim Güneş Çıktısı Alırız*/
+
+mesajVer('ibrahim')// Bu Çıktıda ise Soyad kısmı boş kaldığı için Merhaba ibrahim undefined(bulunamadı) Çıktısı alırız.
+
+mesajVer(); // bu kısımda parametrelerin ikisi de boş olduğu için undefined ( bulunamadı) hatası alırız. 
+
+</script>
+</html>

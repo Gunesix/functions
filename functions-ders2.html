@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions ders 2 </title>
+</head>
+<body>
+    <div id="bilgi"></div>
+</body>
+
+<script>
+
+// bu dersimiz de Local ve global değişkenlerin kullanım şeklini gördük. 
+/* 
+Function içerisine dışarıdan veri alabiliriz fakat içeriden dışarıya  değişken verisi veremeyiz. alttaki örneği kontrol edebiliriz.
+
+n1,n2 Global veri olup dışarıdan function içerisine alındığında sorunsuz şekilde çalışır.
+*/
+let n1=5;
+let n2=7;
+function addition(){
+    let n3=3;
+    return n1+n2+n3;
+    console.log(n1+n2+n3)
+}
+
+addition()
+
+
+
+/* bu kısımda hata alacağız çünkü "n3" farklı bir function içerisinde olduğu için çekmemize izin vermeyecektir. */
+
+function multiplication(){
+    return n1*n3;
+
+}
+
+</script>
+</html>
