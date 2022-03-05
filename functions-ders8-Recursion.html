@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recursion</title>
+  </head>
+  <body>
+    <h1>Recursion</h1>
+    <p>
+      Direkt örnek vererek açıklamak gerekirse, yapmamız gereken bir tas var
+      diyelim ve biz bu task'ı birden fazla parçaya ayırıp daha basit bir halde
+      yazmak istersek veya bu task'ı aksiyon alacak bir fonksyona ve bu task'ı
+      daha basit bir task'e dönüştürmek istersek veya belirli bir data yapısı
+      ile ilgileniyorsak, recursion bu noktada bize yardımı dokunabilecek bir
+      programlama pattern'idir diyebiliriz.
+    </p>
+    <p>
+      bir fonknsyonu çağırdığımız zaman o fonksyon bir cok fonksyonu daha
+      çağırabilir. Kısaca fonsyon kendisini tekrar çağırıyor ise biz buna
+      recursion diyoruz.
+    </p>
+
+    <script>
+        // bir fonksyon yazalım ve bu fonksyon sayının kuvvetini alsın.
+        // pow(2,2)= 4
+        // pow(2,3)= 8
+        // pow(2,4)=16  bu değerleri verecek şekilde deneyelim.
+//         function pow(x, n) {
+//   let result = 1;
+
+//   for (let i = 0; i < n; i++) {
+//     result *= x;
+//   }
+
+//   return result;
+// }
+
+// alert(pow(2, 6));
+
+function sayi ( n){
+  if (n < 0)
+  if (n == 1)
+  n * sayi ( n-1)
+}
+console.log(1*2*3*4*5*6*7) // Sayının Faktöriyelini almak için normalde bu işlemi yapmamız lazım örneğin 25 faktöriyel diyebilmek için 1*2*3*4*5*....n! gibi gitmemiz gerekirken yukarıdaki kod blogunu yazarak aşağıya sadece 25 yazmamız yeterli olacaktır.
+
+console.log(sayi(3)) // buradaki kod ile 25! sonucunu bulabiliriz.
+
+
+
+
+
+
+
+
+
+
+
+
+         </script> 
+  </body>
+</html>

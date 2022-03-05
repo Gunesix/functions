@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fat Arrow Kullanımı.</title>
+  </head>
+  <body>
+    <script>
+      function hello(name) {
+        console.log(`Merhaba ${name} Hoş Geldin`);
+      }
+      hello("ibrahim");
+
+      const hello1 = (firstName) =>
+        console.log(`Hello ${firstName} Hoş Geldiniz.`);
+
+      hello1("Javascript");
+
+      const jsUsage = (userName, userAge) =>
+        console.log(
+          `Hello Mr.${userName} Welcome to our Js Lessons. Your age must be older than 18. Your age is ${userAge}`
+        );
+
+      jsUsage("Gunesix", 29);
+
+      const calculate = (x, y) => x * y;
+
+      console.log(calculate(2, 3));
+
+      const myList = (param1, param2) => param1.concat(param2);
+
+     
+
+      console.log( myList([1, 2, 3], [4, 5, 6, 7, 8, 9]));
+
+      const kediBesle = (name) => {
+        if (name === "hungry") {
+          return `${name} Beslenme saatin geldi`;
+        } else {
+          return `${name} Henüz aç değilsin biraz daha beklemen lazım`;
+        }
+      };
+      
+      console.log(kediBesle('Çakir','Hungry'))
+    </script>
+  </body>
+</html>

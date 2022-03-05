@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonsiyona Parametre (params) ve Geridönüş (return) Eklemek
+    </title>
+</head>
+<body>
+
+    <h1>Fonsiyona Parametre (params) ve Geridönüş (return) Eklemek
+    </h1>
+
+    <h4 id="selam"></h4>
+    
+</body>
+
+<script>
+   let firstName = 'Lorem' //
+
+function greetings(firstName='',lastName=''){
+    console.log(`Merhaba ${firstName}`)
+    console.log(`merhaba ${firstName} ${lastName}`)
+
+}
+
+console.log(firstName)
+greetings()
+greetings('parametre')
+
+
+function greetings2(firstName,lastName){
+    let info = `Merhaba ${firstName} ${lastName} Hoş geldiniz`
+    return info
+}
+    let greetingsInfo=greetings2('ad','soyad')
+    console.log(greetingsInfo)
+
+
+    function domIdWriteInfo (id,info){
+        let domObject= document.querySelector(`#${id}`)
+        domObject.innerHTML=info
+    }
+
+
+    let = htmlInfo= `<span style="color:red">Red Colored</span>` 
+
+
+    domIdWriteInfo('selam',htmlInfo)
+
+
+    function additon(a,b){
+        let sonuc = a+b
+        return sonuc
+        let result = a*b
+        return result
+    }
+console.log(additon(2,3))
+
+
+const PI=3.14
+function daireAlaniSonucu(x){
+    let dairealani= PI*x*x
+    return dairealani
+}
+var dairesonuc=daireAlaniSonucu(4)
+console.log(dairesonuc)
+
+
+    </script>
+</html>
